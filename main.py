@@ -81,6 +81,5 @@ async def clear(interaction: discord.Interaction, amount: int = 5):
     else:
         await interaction.response.send_message("❌ No permission", ephemeral=True)
 
-keep_alive()
 # ✅ start the bot
 bot.run(os.getenv("TOKEN"))
