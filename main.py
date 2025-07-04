@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 from keep_alive import keep_alive
+import os
 
 # ✅ Intents
 intents = discord.Intents.default()
@@ -83,4 +84,4 @@ async def clear(interaction: discord.Interaction, amount: int = 5):
 
 keep_alive()
 # ✅ start the bot
-bot.run("TOKEN")
+bot.run(os.getenv("TOKEN"))
