@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
+from webservice import webservice
 import os
 
 # ✅ Intents
@@ -81,5 +82,5 @@ async def clear(interaction: discord.Interaction, amount: int = 5):
     else:
         await interaction.response.send_message("❌ No permission", ephemeral=True)
 
-# ✅ start the bot
+webservice()
 bot.run(os.getenv("TOKEN"))
